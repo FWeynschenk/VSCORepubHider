@@ -35,10 +35,12 @@ function badgeOn() {
   chrome.storage.local.set({ "hideRepublishes": true });
   chrome.action.setBadgeBackgroundColor({ color: 'green' });
   chrome.action.setBadgeText({ text: 'on' });
+  chrome.action.setTitle({ title: 'Hiding Republishes' });
 }
 
 function badgeOff() {
   chrome.storage.local.set({ "hideRepublishes": false });
   chrome.action.setBadgeBackgroundColor({ color: 'red' });
   chrome.action.setBadgeText({ text: 'off' });
+  chrome.action.setTitle({ title: 'Showing Republishes' });
 }
